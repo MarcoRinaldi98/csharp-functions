@@ -35,6 +35,8 @@ Console.WriteLine(); // linea vuota
 // stampo la somma di tutti i numeri elevati al quadrato
 Console.WriteLine($"La somma di tutti i numeri interi contenuti nell'array ed elevati al quadrato è {SommaElementiArray(ElevaArrayAlQuadrato(arrayDiNumeri))}");
 
+Console.WriteLine();
+
 
 
 // FUNZIONI
@@ -88,4 +90,63 @@ int SommaElementiArray(int[] array)
     }
 
     return somma;
+}
+
+// EXTRA BONUS
+// 1 - Una funzione che, dato un numero intero n > 0, ne calcoli il fattoriale.
+Console.Write("Inserisci un numero: ");
+int numero = int.Parse(Console.ReadLine());
+
+if (numero < 0)
+{
+    Console.WriteLine("Il numero deve essere positivo.");
+}
+else
+{
+    long fattoriale = CalcolaFattoriale(numero);
+    Console.WriteLine($"Il fattoriale di {numero} è {fattoriale}");
+}
+
+Console.WriteLine();
+
+int CalcolaFattoriale(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * CalcolaFattoriale(n - 1);
+    }
+}
+
+// 2 - Una funzione che, dato un numero intero n >= 0, restituisca l'n-esimo elemento della sequenza di Fibonacci.
+Console.Write("Inserisci un numero: ");
+int n = int.Parse(Console.ReadLine());
+
+if (n < 0)
+{
+    Console.WriteLine("Il numero non deve essere negativo.");
+}
+else
+{
+    int risultato = CalcolaFibonacci(n);
+    Console.WriteLine($"L'n-esimo elemento della sequenza di Fibonacci con n = {n} è {risultato}");
+}
+
+int CalcolaFibonacci(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    else if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return CalcolaFibonacci(n - 1) + CalcolaFibonacci(n - 2);
+    }
 }
