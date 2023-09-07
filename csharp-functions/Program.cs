@@ -1,7 +1,12 @@
 ﻿// ESERCIZIO SULLE FUNZIONI
+int elementiArray = 0;
 // chiedo all'utente da quanti elementi vuole che sia formata l'array
 Console.Write("Da quanti elementi vuoi che sia composta l'array? ");
-int elementiArray = int.Parse(Console.ReadLine());
+while (int.TryParse(Console.ReadLine(), out elementiArray) == false)
+{
+    Console.Write("Non hai inserito un numero! Riprova: ");
+}
+Console.WriteLine($"Hai scelto che l'array dovrà contenere {elementiArray} elementi");
 
 // in base alla risposta dell'utente creo un array di tale dimensione e chiedo ogni numero da inserire all'utente
 int[] arrayDiNumeri = new int[elementiArray];
