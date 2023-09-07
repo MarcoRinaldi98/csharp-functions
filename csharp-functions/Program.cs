@@ -23,12 +23,12 @@ StampaArray(arrayDiNumeri);
 Console.WriteLine(); // linea vuota
 
 // stampo la somma di tutti i numeri
-Console.WriteLine($"La somma di tutti i numeri interi contenuti nell'array è {sommaElementiArray(arrayDiNumeri)}");
+Console.WriteLine($"La somma di tutti i numeri interi contenuti nell'array è {SommaElementiArray(arrayDiNumeri)}");
 
 Console.WriteLine(); // linea vuota
 
 // stampo la somma di tutti i numeri elevati al quadrato
-Console.WriteLine($"La somma di tutti i numeri interi contenuti nell'array ed elevati al quadrato è {sommaElementiArray(ElevaArrayAlQuadrato(arrayDiNumeri))}");
+Console.WriteLine($"La somma di tutti i numeri interi contenuti nell'array ed elevati al quadrato è {SommaElementiArray(ElevaArrayAlQuadrato(arrayDiNumeri))}");
 
 
 
@@ -73,7 +73,7 @@ int[] ElevaArrayAlQuadrato(int[] array)
 }
 
 // funzione che fa la somma di tutti gli elementi che si trovano dentro l'array passata
-int sommaElementiArray(int[] array)
+int SommaElementiArray(int[] array)
 {
     int somma = 0;
 
