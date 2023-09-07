@@ -1,6 +1,15 @@
 ﻿// ESERCIZIO SULLE FUNZIONI
-// definisco l'array di numeri interi
-int[] arrayDiNumeri = { 2, 6, 7, 5, 3, 9 };
+// chiedo all'utente da quanti elementi vuole che sia formata l'array
+Console.Write("Da quanti elementi vuoi che sia composta l'array? ");
+int elementiArray = int.Parse(Console.ReadLine());
+
+// in base alla risposta dell'utente creo un array di tale dimensione e chiedo ogni numero da inserire all'utente
+int[] arrayDiNumeri = new int[elementiArray];
+for (int i = 0; i < arrayDiNumeri.Length; i++)
+{
+    Console.Write($"Inserisci il {i + 1}° numero: ");
+    arrayDiNumeri[i] = int.Parse(Console.ReadLine());
+}
 
 // stampo l'array di numeri interi
 StampaArray(arrayDiNumeri);
